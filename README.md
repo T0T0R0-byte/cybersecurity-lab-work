@@ -44,6 +44,10 @@ Flags and credentials visible in the screenshots belong to that lab VM, which no
 
 Solo work: **Faraj Farook** (CB012653).
 
+## The reports as submitted
+
+The original submitted documents are in [`reports/`](reports/), kept alongside the write-up above so the artefact can be checked directly.
+
 ## License
 
 MIT, see [LICENSE](LICENSE).
