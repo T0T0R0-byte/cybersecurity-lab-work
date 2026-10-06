@@ -1,0 +1,7 @@
+*.docx
+*.pdf
+*.ovf
+*.vmdk
+*.iso
+Thumbs.db
+.DS_Store
