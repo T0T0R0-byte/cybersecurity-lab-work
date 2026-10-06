@@ -1,53 +1,134 @@
-# Cyber Security Lab Work: offensive security practicals
+<div align="center">
 
-![Focus: Offensive Security](https://img.shields.io/badge/Focus-Offensive%20Security-informationall)
-![Platform: Ubuntu](https://img.shields.io/badge/Platform-Ubuntu-E95420)
-![License: MIT](https://img.shields.io/badge/License-MIT-green)
+# Cyber Security Lab Work
 
-Write-ups and evidence from practical cyber security coursework (Level 5, module COMP50003: I built a
-deliberately vulnerable Ubuntu VM, then attacked it in phases and documented each step with
-screenshots taken as I worked.
+### Hands-on offensive security practicals documented from a controlled Ubuntu lab.
 
-Everything here is against a box I configured myself, on a host-only lab network. No client systems,
-no third-party targets.
+A collection of four practical phases covering web application exploitation, cryptography, privilege escalation, network exploitation and forensic analysis.
 
-## The phases
+[**Repository**](https://github.com/T0T0R0-byte/cybersecurity-lab-work)
 
-| Write-up | Covers | Screenshots |
-|---|---|---|
-| [Phase 1: Web Application Exploitation](docs/01-web-application-exploitation.md) | Vulnerable web app on the lab box, exploited with request/response evidence at each step | 77 |
-| [Phase 2: Cryptography](docs/02-cryptography.md) | Cryptography challenges from the same exercise | 20 |
-| [Phase 3: Privilege Escalation](docs/03-privilege-escalation.md) | Low-privileged `employee` account to root: sudo misconfiguration and an insecure SUID binary | 18 |
-| [Phase 4 and 5: Network Exploitation and Forensics](docs/04-network-and-forensics.md) | Network-level exploitation, then the forensic examination of what the activity left behind | 20 |
+![Focus](https://img.shields.io/badge/Focus-Offensive%20Security-informational)
+![Platform](https://img.shields.io/badge/Platform-Ubuntu-E95420)
+![Evidence](https://img.shields.io/badge/Evidence-Screenshots%20%26%20Write--ups-6f42c1)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-Each phase write-up is markdown with the screenshots embedded inline, in the order they were captured.
+</div>
 
-## Two things to be straight about
+---
 
-1. **Phase 2 is screenshots only.** The text write-up for that phase is an empty document in my
-   archive, so the page is a captioned sequence of evidence rather than prose. Nothing has been
-   invented to fill it in.
-2. **There is no separate CTF write-up.** My archive had a file named `CTF_CB012653.docx`, but it is
-   byte-for-byte identical to the Phase 1 document (same MD5), so it is a duplicate copy, not a
-   second piece of work. It is not reproduced here.
+## Overview
 
-Flags and credentials visible in the screenshots belong to that lab VM, which no longer exists.
+This repository contains practical security work performed against an Ubuntu virtual machine built for coursework.
 
-## How it was done
+The lab was deliberately configured with weaknesses, then assessed through controlled attack phases. Each phase records the setup, commands, observed behaviour and supporting evidence.
 
-- Target: Ubuntu VM, host-only networking, vulnerabilities configured by hand (misconfigured sudo,
-  SUID binaries, a deliberately vulnerable web app, service misconfigurations).
-- Each phase: set up the weakness, exploit it, capture the evidence, write it up.
-- Evidence: inline screenshots taken during the work, plus the commands and outputs in the text.
+The work stays inside the lab environment. No third-party systems are targeted.
 
-## Credits
+## Practical Phases
 
-Solo work: **Faraj Farook** (CB012653).
+| Phase | Focus | Evidence |
+| --- | --- | --- |
+| **01** | Web Application Exploitation | Request/response evidence, vulnerable services and exploitation steps |
+| **02** | Cryptography | Challenge evidence covering the assigned cryptographic tasks |
+| **03** | Privilege Escalation | Sudo misconfiguration, SUID abuse and root-level access |
+| **04 & 05** | Network Exploitation + Forensics | Service enumeration, FTP exploitation, log analysis and evidence recovery |
 
-## The reports as submitted
+## Evidence Gallery
 
-The original submitted documents are in [`reports/`](reports/), kept alongside the write-up above so the artefact can be checked directly.
+The repository contains the full evidence set inside `docs/evidence/`. A few representative captures are shown below.
 
-## License
+<table>
+<tr>
+<td width="50%">
 
-MIT, see [LICENSE](LICENSE).
+### Web Exploitation
+
+<img src="docs/evidence/01-web-application-exploitation/069.png" alt="Web exploitation evidence">
+
+</td>
+<td width="50%">
+
+### Privilege Escalation
+
+<img src="docs/evidence/03-privilege-escalation/014.png" alt="Privilege escalation evidence">
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### Network Exploitation
+
+<img src="docs/evidence/04-network-and-forensics/004.png" alt="Network exploitation evidence">
+
+</td>
+<td width="50%">
+
+### Forensic Analysis
+
+<img src="docs/evidence/01-web-application-exploitation/075.png" alt="Forensic analysis evidence">
+
+</td>
+</tr>
+</table>
+
+## Write-ups
+
+| Document | Coverage |
+| --- | --- |
+| [Phase 1: Web Application Exploitation](docs/01-web-application-exploitation.md) | Web server setup, vulnerable application work and exploitation evidence |
+| [Phase 2: Cryptography](docs/02-cryptography.md) | Assigned cryptography challenges and captured evidence |
+| [Phase 3: Privilege Escalation](docs/03-privilege-escalation.md) | Sudo abuse and insecure SUID binary escalation |
+| [Phase 4 and 5: Network Exploitation and Forensics](docs/04-network-and-forensics.md) | Enumeration, FTP exploitation and forensic investigation |
+
+## Lab Environment
+
+- Ubuntu Server virtual machine
+- Host-only lab networking
+- Apache2, MariaDB, PHP and vsftpd
+- SSH and FTP services
+- Kali Linux attacker environment
+- Command-line tooling for enumeration, exploitation and investigation
+
+The environment was built specifically for the practical work and is no longer an active target.
+
+## What I Practised
+
+- Web application enumeration and exploitation
+- Cryptographic challenge solving
+- Linux privilege escalation
+- Service and network enumeration
+- FTP misconfiguration exploitation
+- Authentication-log investigation
+- Shell history and filesystem analysis
+- Evidence-driven technical reporting
+
+## Repository Structure
+
+```text
+.
+├── docs/
+│   ├── 01-web-application-exploitation.md
+│   ├── 02-cryptography.md
+│   ├── 03-privilege-escalation.md
+│   ├── 04-network-and-forensics.md
+│   └── evidence/
+│       ├── 01-web-application-exploitation/
+│       ├── 02-cryptography/
+│       ├── 03-privilege-escalation/
+│       └── 04-network-and-forensics/
+├── .gitignore
+├── LICENSE
+└── README.md
+```
+
+## Scope
+
+This is coursework performed in a deliberately vulnerable environment owned and configured for the exercise. The evidence and techniques are intended for authorised lab use and security education.
+
+<div align="center">
+
+**Faraj Farook · CB012653**
+
+</div>
